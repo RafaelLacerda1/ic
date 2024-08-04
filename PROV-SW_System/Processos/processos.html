@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- CSS do Art -->
+    <link rel="stylesheet" href="css/styProcessos.css">
+    <link rel="stylesheet" href="css/styles.css">
+     <!-- Jquery Modal-->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class='dashboard'>
+        <div class="dashboard-nav">
+            <nav class="dashboard-nav-list">
+              <header><a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a><a href="#" class="brand-logo "><span><p class="corInicio">PROV-SwSystem</p></span></a></header>
+              <a href="#" class="dashboard-nav-item"><i class="fas fa-home"></i> Home</a>
+              <a href="#" class="dashboard-nav-item"><i class="fas fa-user"></i> Minha Conta </a>
+              <div class="nav-item-divider"></div>
+  
+              <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-users"></i> Artefatos </a>
+                  <div class='dashboard-nav-dropdown-menu'>
+                      <a href="../Artefatos/artefatos.html" class="dashboard-nav-dropdown-item active">Cadastrar</a>
+                      <a href="../Artefatos/listarArtNovo.html" class="dashboard-nav-dropdown-item">Listar</a>
+                  </div>
+              </div>
+              <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-users"></i> Recursos </a>
+                  <div class='dashboard-nav-dropdown-menu'>
+                      <a href="../Recursos/recursos.html" class="dashboard-nav-dropdown-item">Cadastrar</a>
+                      <a href="../Recursos/listarRecursos.html" class="dashboard-nav-dropdown-item">Listar</a>
+                  </div>
+              </div>
+              <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-users"></i> Procedimentos </a>
+                  <div class='dashboard-nav-dropdown-menu'>
+                      <a href="../Procedimentos/procedimentos.html" class="dashboard-nav-dropdown-item">Cadastrar</a>
+                      <a href="../Procedimentos/listarProcedimentos.html" class="dashboard-nav-dropdown-item">Listar</a>
+                  </div>
+              </div>
+              <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-users"></i>Processos </a>
+                  <div class='dashboard-nav-dropdown-menu'>
+                      <a href="../Processos/processos.html" class="dashboard-nav-dropdown-item">Cadastrar</a>
+                      <a href="../Processos/listarProcessos.html" class="dashboard-nav-dropdown-item">Listar</a>
+                  </div>
+              </div>
+              <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-money-check-alt"></i> Atividades </a>
+                  <div class='dashboard-nav-dropdown-menu'>
+                    <a href="../Atividades/atividades.html" class="dashboard-nav-dropdown-item">Cadastrar</a>
+                    <a href="../Atividades/listarAtividade.html" class="dashboard-nav-dropdown-item">Listar</a>
+                  </div>
+                </div>
+  
+              <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-money-check-alt"></i> Stakeholders </a>
+                <div class='dashboard-nav-dropdown-menu'>
+                  <a href="../Stakeholder/stakeholder.html" class="dashboard-nav-dropdown-item">Cadastrar</a>
+                  <a href="../Stakeholder/listarStakeholder.html" class="dashboard-nav-dropdown-item">Listar</a>
+                </div>
+              </div>
+              <div class="nav-item-divider"></div>
+              <a href="#" class="dashboard-nav-item"><i class="fas fa-sign-out-alt"></i> Logout </a>
+            </nav>
+          </div>
+     <main>
+        <div class='dashboard dashboard-app corfundo'>
+            <header class='dashboard-toolbar'>
+                <a href="#!" class="menu-toggle">
+                     <img src="img/three_16602750.png" width="15" height="15">
+                </a>
+                <div class="col-6">
+                <div class="col-1 psw">
+                    <a href="../index.html"><img src="./img/Logo.png" alt="PSW" id="logo"></a> 
+                </div>
+            </header>
+
+            <div class='dashboard-content'>
+                <div class='container-fluid'>
+                    <div class='card' >
+                        <div class='card-header'>
+                            <h1>Processos de Software</h1>
+                        </div>
+                        <div class='card-body'>
+                            <form id="formulário">
+                                <!--<div id="github-login">
+                                    <div class="row row-cols-12">
+                                        <div class="div col-2 titulo">
+                                            <p class="h6 titulo">Usuário do github:</p>
+                                        </div>
+                                        <div class="col-6 usi-git">
+                                            <label for="exampleFormControlTextarea1" class="form-label titulo"></label>
+                                            <textarea class="form-control titulo-texto user" id="github-user" rows="3" name="user"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row row-cols-12">
+                                        <div class="div col-2 titulo">
+                                            <p class="h6 titulo">Nome do repositório:</p>
+                                        </div>
+                                        <div class="col-6 usi-git">
+                                            <label for="exampleFormControlTextarea2" class="form-label titulo"></label>
+                                            <textarea class="form-control titulo-texto repos" id="github-repo" rows="3" name="repos"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row row-cols-12">
+                                        <div class="div col-2 titulo token">
+                                            <p class="h6 titulo">Token de acesso:</p>
+                                        </div>
+                                        <div class="col-6 git-token">
+                                            <label for="exampleFormControlTextarea3" class="form-label titulo"></label>
+                                            <textarea class="form-control titulo-texto pass" id="github-token" rows="3" name="password"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row row-cols-12">
+                                        <div class="col-5"></div>
+                                        <div class="col-1 align-self-center justify-content-center" style="margin-top: 2vh; margin-left: 50vw;">
+                                            <button type="button" class="btn btn-secondary rounded btn-sm btn-todos" id="github-connect">Conectar</button>
+                                        </div>
+                                    </div>
+                                </div>-->
+                                
+                                <div class="container-sm pagina">
+                                    <div class="row row-cols-12">
+                                        <div class="div col-2">
+                                            <p class="h6 titulo">Nome:</p>
+                                        </div>
+                                        <div class="col-9">
+                                            <label for="exampleFormControlTextarea" class="form-label titulo"></label>
+                                            <textarea class="form-control titulo-texto name" id="exampleFormControlTextarea" name="name" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-sm pagina">
+                                    <div class="row row-cols-12">
+                                        <div class="div col-2">
+                                            <p class="h6 titulo">Descrição:</p>
+                                        </div>
+                                        <div class="col-9">
+                                            <label for="exampleFormControlTextareas" class="form-label description"></label>
+                                            <textarea class="form-control description-texto" id="exampleFormControlTextareas" name="description" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="container-sm">
+                                    <p class="h5 titulo phr">Stakeholders Atríbuidos </p>
+                                    <hr>
+                                </div>
+                                <!-- STAKEHOLDER ATRIBUIDOS-->
+                                <div class="container-sm pagina">
+                                    <div class="row itens">
+                                        <div class=" col-3 stak">
+                                            <p class="h6">
+                                                Possui Stakeholders Atribuidos:
+                                            </p>   
+                                        </div>
+                                        <div class="col-1 quadrado">
+                                            <input class="form-check-input border-secondary" type="checkbox" id="dados" onchange="toggleMoreContentStakeholder()">
+                                        </div>
+                                        <div class="col-1">
+                                            <button type="button" class="btn btn-secondary rounded btn-sm btn-todos cadastrar-stakeholder" href="../Stakeholder/stakeholder.html">Cadastrar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-container container-sm pop" id="stakeholder" style="display: none;">
+                                    <!--AQUI VAO SER ADICIONADOS TEXTAREAS DINAMICAMENTE-->
+                                </div>
+                                <!-- BUTTONS -->
+                                <div class="container-sm buttons">
+                                    <div class="row justify-content-center">
+                                        <div class="col-1">
+                                            <button type="submit" class="btn btn-secondary btn-sm btn-todos cadastrar rounded">Cadastrar</button>
+                                        </div>
+                                        <div class="col-2">
+                                            <button type="reset" class="btn btn-secondary btn-sm btn-todos cancelar rounded">Cancelar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>     
+            
+                            <!--Modal-->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Enviado com Sucesso</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Processo cadastrado com sucesso!
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-animated bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>    
+                                
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./softProcess.js">
+        function toggleMoreContentStakeholder() {
+        var checkbox = document.getElementById("dados");
+            if (checkbox.checked) {
+                addMoreInput();
+            } else {
+                removeAllInput();
+            }
+        }
+    </script>
+
+    <!--Tradutor-->
+    <div class="gtranslate_wrapper"></div>
+    <script>window.gtranslateSettings = {"default_language":"pt","languages":["pt","es","en"],"wrapper_selector":".gtranslate_wrapper","alt_flags":{"en":"usa","pt":"brazil","es":"argentina"}}</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+/* Estilos gerais */
+
+*{
+    color: #25282E;
+}
+
+.apl {
+    padding-left: 0px;
+}
+
+a, i{
+    transition: .5s;
+    text-decoration: none; /* retirar a linha dos links */
+}
+
+.secondary-color {
+    color: #555;
+}
+
+.center-image {
+    background-size: cover; /* adaptar a imagem ao tamanho da div */
+    background-position: center; /* centralizar a imagem no centro do fundo */
+}
+
+.btn {
+    text-decoration: none; /* retirar a linha dos links */
+    background-color: #25282E;
+    color: #FFF;
+    padding: 7px 18px;
+    border-radius: 0;
+}
+
+/* HEADER */
+
+#header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #CCC;
+    background-color: rgb(152, 180, 240);
+}
+
+.btn-ll {
+    background-color: #888;
+    border-color: #fff;
+    border-radius: 8%;
+    margin-top: 30px;
+}
+
+.menu {
+    font-size: 15px;
+    color: #FFF;
+}
+
+.p-header {
+    margin-top: 25px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.codigo {
+    margin-bottom: 20px;
+}
+
+/*BOTÃO DE EDIÇÃO E DELETE*/
+
+.botoes{
+    display: inline-flex;
+}
+.list{
+    width: 65px;
+    height: 35px;
+    margin-left: 10px;
+    margin-top: 15px;
+    border-radius: 8%;
+    border-color: #FFF;
+    background-color: #888;
+    vertical-align: middle;
+}
+
+.edit{
+    padding-left: 11px;
+
+}
+.delet{
+    padding-left: 8px;
+    width: 74px;
+    text-align: center;
+}
+
+/*TERMINA AQUI*/
+
+button, input, optgroup, select, textarea {
+    border-radius: 8%;
+}
+
+.buttons {
+    margin-top: 100px;
+    margin-bottom: 0px;
+}
+
+.btn-sm {
+    background-color: #888;
+    width: 100px;
+    height: 35px;
+    margin-left: 10px;
+    margin-top: 30px;
+    border-color: #FFF;
+}
+
+#header p {
+    margin-bottom: 0;
+}
+
+#logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+#logo {
+    width: 200px;
+    margin-right: 15p
+}
+
+/* MAIN */
+.usi-git {
+    width: 300px;
+}
+
+.git-token {
+    width: 450px;
+}
+
+.rev{
+    padding-top: 5px;
+    padding-right: 0px;
+    width: 180px;
+}
+.esp {
+    margin-bottom: 30px;
+}
+.up {
+    padding-top: 10px;
+    padding-right: 0px;
+    width: 190px;
+}
+
+.titulo{
+    padding-top: 20px;
+    padding-right: 0px;
+}
+
+.fundo {
+    margin-top: 100px;
+    background-color:rgb(152, 180, 240);
+    height:auto;
+}
+
+.processos {
+    margin-top: 130px;
+}
+
+.codigo {
+    margin-top: 50px;
+}
+
+.house {
+    margin-left: 100px;
+    font-size: 30px;
+}
+
+main{
+    flex: 1;
+}
+
+main h1 {
+    margin-left: 33px;
+}
+
+#pesquisar {
+    width: 150px;
+}
+
+.d-flex {
+    margin-top: 8px;
+}
+
+.btn-todos {
+    background-color:rgb(152, 180, 240);
+    width: 115px;
+    height: 35px;
+    margin-left: 10px;
+    border-radius: 8%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 10px;
+}
+
+.btn-pesquisar {
+    background-color: rgb(152, 180, 240);
+    width: 115px;
+    height: 35px;
+    border-radius: 8%;
+    margin-top: 1px;
+    border-color: #FFF;
+}
+
+.horas {
+    margin-top: 20px;
+} 
+
+.responsavel {
+    width: 265px;
+}
+
+.phr {
+    color: #799DA7;
+    margin-bottom: 0px;
+}
+
+hr {
+    margin-top: 0px;
+}
+
+.matricula {
+    width: 200px;
+}
+
+.cancelar{
+    margin-left: 100px;
+}
+
+.titulo-texto {
+    height: 20px;
+}
+
+.nome {
+    width: 800px;
+    padding-left: 0px;
+    padding-top: 25px;
+}
+
+
+.nome2 {
+    width: 800px;
+}
+
+.nome3 {
+    height: 100px;
+}
+
+.pop {
+    padding-left: 0px;
+}
+
+.final {
+    padding-left: 0px;
+}
+
+.nome-texto {
+    width: 188px;
+    padding-right: 0px;
+}
+
+.itens {
+    font-size: 25px;
+}
+
+.stak {
+    width: 180px;
+    padding-top: 6px;
+    padding-right: 0px;
+}
+
+.quadrado {
+    padding-top: 10px;
+}
+
+.foto {
+    padding-top: 17px;
+    padding-right: 0px;
+}
+
+.token {
+    padding-bottom: 15px;
+}
+
+.prov {
+    padding: 5px;
+}
+
+.drop-altura {
+    margin-top: 40px;
+    height: 35px;
+    width: 0px;
+}
+
+.funcao {
+    padding-top: 9px;
+}
+
+/* NAVBAR */
+
+#navbar {
+    padding: 10px;
+    margin: 10px auto;
+}
+
+#navbar a {
+    width: 80px;
+    color: #444;  
+}
+
+#navbar a:hover {
+    color: #C1B696;
+}
+
+/* FOOTER */
+
+.footer {
+    /* margin-top: 100px; */
+    border-top: 1px solid #CCC;
+    background-color: rgb(152, 180, 240);
+    padding: 20px;
+    width: 100%;
+}
+
+.footer i {
+    font-size: 20px;
+}
+
+.footer p {
+    text-align: center;
+    margin: 20px;
+}
+
+a:hover {
+    color: #C1B696;
+}
+
+/*Listar*/
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.activities {
+    margin-top: 160px;
+    margin-bottom: 30px;
+}

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- CSS do Art -->
+    <link rel="stylesheet" href="css/stakeholders.css">
+    <link rel="stylesheet" href="css/styles.css">
+     <!-- Jquery Modal-->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class='dashboard'>
+        <div class="dashboard-nav">
+            <nav class="dashboard-nav-list">
+              <header><a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a><a href="#" class="brand-logo "><span><p class="corInicio">PROV-SwSystem</p></span></a></header>
+              <a href="#" class="dashboard-nav-item"><i class="fas fa-home"></i> Home</a>
+              <a href="#" class="dashboard-nav-item"><i class="fas fa-user"></i> Minha Conta </a>
+              <div class="nav-item-divider"></div>
+  
+              <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-users"></i> Artefatos </a>
+                  <div class='dashboard-nav-dropdown-menu'>
+                      <a href="../Artefatos/artefatos.html" class="dashboard-nav-dropdown-item active">Cadastrar</a>
+                      <a href="../Artefatos/listarArtNovo.html" class="dashboard-nav-dropdown-item">Listar</a>
+                  </div>
+              </div>
+              <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-users"></i> Recursos </a>
+                  <div class='dashboard-nav-dropdown-menu'>
+                      <a href="../Recursos/recursos.html" class="dashboard-nav-dropdown-item">Cadastrar</a>
+                      <a href="../Recursos/listarRecursos.html" class="dashboard-nav-dropdown-item">Listar</a>
+                  </div>
+              </div>
+              <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-users"></i> Procedimentos </a>
+                  <div class='dashboard-nav-dropdown-menu'>
+                      <a href="../Procedimentos/procedimentos.html" class="dashboard-nav-dropdown-item">Cadastrar</a>
+                      <a href="../Procedimentos/listarProcedimentos.html" class="dashboard-nav-dropdown-item">Listar</a>
+                  </div>
+              </div>
+              <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-users"></i>Processos </a>
+                  <div class='dashboard-nav-dropdown-menu'>
+                      <a href="../Processos/processos.html" class="dashboard-nav-dropdown-item">Cadastrar</a>
+                      <a href="../Processos/listarProcessos.html" class="dashboard-nav-dropdown-item">Listar</a>
+                  </div>
+              </div>
+              <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-money-check-alt"></i> Atividades </a>
+                  <div class='dashboard-nav-dropdown-menu'>
+                    <a href="../Atividades/atividades.html" class="dashboard-nav-dropdown-item">Cadastrar</a>
+                    <a href="../Atividades/listarAtividade.html" class="dashboard-nav-dropdown-item">Listar</a>
+                  </div>
+                </div>
+  
+              <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-money-check-alt"></i> Stakeholders </a>
+                <div class='dashboard-nav-dropdown-menu'>
+                  <a href="../Stakeholder/stakeholder.html" class="dashboard-nav-dropdown-item">Cadastrar</a>
+                  <a href="../Stakeholder/listarStakeholder.html" class="dashboard-nav-dropdown-item">Listar</a>
+                </div>
+              </div>
+              <div class="nav-item-divider"></div>
+              <a href="#" class="dashboard-nav-item"><i class="fas fa-sign-out-alt"></i> Logout </a>
+            </nav>
+          </div>
+     <main>
+        <div class='dashboard dashboard-app corfundo'>
+            <header class='dashboard-toolbar'>
+                <a href="#!" class="menu-toggle">
+                     <img src="img/three_16602750.png" width="15" height="15">
+                </a>
+                <div class="col-6">
+                <div class="col-1 psw">
+                    <a href="../index.html"><img src="./img/Logo.png" alt="PSW" id="logo"></a> 
+                </div>
+            </header>
+
+            <div class='dashboard-content'>
+                <div class='container-fluid'>
+                    <div class='card' >
+                        <div class='card-header'>
+                            <h1> Listar Stakeholders </h1>
+                        </div>
+                        <div class="d-flex justify-content-center flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3" role="search">
+                            <input class="form-control me-2" id="pesquisar" type="search" placeholder="" aria-label="Search">
+                            <button class="btn btn-outline-secondary rounded btn-pesquisar rounded align-middle" type="submit">Pesquisar</button>
+                        </div>
+                        <div class='card-body'>
+                            <main class= "wrapper">
+                                <div class="col py-3 table-responsive">
+                                    <table class="table table-bordered table-hover" id="tabelaStakeholder">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"><strong>ID</strong></th>
+                                                <th scope="col"><strong>Nome</strong></th>
+                                                <th scope="col"><strong>Tipo</strong></th>
+                                                <th scope="col" class="col-3"><strong>Ação</strong></th>
+                                            </tr>
+                                        </thead>
+                    
+                                        <tbody>
+                                            <tr class="table" id="row1">
+                                                <td class="col-auto"></td>
+                                                <td class="col-auto"></td>
+                                                <td class="col-auto"></td>
+                                                <td class="col-auto acao-btns botoes justify-content-center container-fluid">
+                                                    <button type="button" class="btn botoes btn-success rounded btn-sm list">Editar</button>
+                                                    <button type="button" class="btn botoes btn-danger rounded btn-sm list" onclick="exibirModal('row1')">Apagar</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div id="modalEditar" class="modal fade" role="dialog">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Editar</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form id="formEditar">
+                                                        <input type="hidden" id="editId" name="id">
+                                                        <div class="form-group">
+                                                            <label for="editNome">Nome:</label>
+                                                            <input type="text" class="form-control" id="editNome" name="nome">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="editTipo">Tipo:</label>
+                                                            <select class="form-control" id="editTipo" name="tipo">
+                                                                <option value="Time">Time</option>
+                                                                <option value="Pessoa">Pessoa</option>
+                                                                <option value="Organização">Organização</option>
+                                                            </select>
+                                                        </div>
+                                                        <button type="submit" class="btn btn-primary rounded">Salvar</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                        
+                                    <!-- Modal de confirmação -->
+                                    <div class="modal fade" id="confirmacaoModal" tabindex="-1" role="dialog" aria-labelledby="confirmacaoModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="confirmacaoModalLabel">Confirmar Exclusão</h5>
+                                                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Tem certeza de que deseja excluir este Stakeholder?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary rounded" data-dismiss="modal">Cancelar</button>
+                                                    <button type="button" class="btn btn-danger rounded" id="confirmarExclusao">Confirmar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                            </main>
+                            <!-- Modal de Edição -->
+                            <div id="modalEditar" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Editar</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form id="formEditar">
+                                                <input type="hidden" id="editId" name="id">
+                                                <div class="form-group">
+                                                    <label for="editNome">Nome:</label>
+                                                    <input type="text" class="form-control" id="editNome" name="nome">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="editTipo">Tipo:</label>
+                                                    <select class="form-control" id="editTipo" name="tipo">
+                                                        <option value="Time">Time</option>
+                                                        <option value="Pessoa">Pessoa</option>
+                                                        <option value="Organização">Organização</option>
+                                                    </select>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary roundedvar"></button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            
+                        </div>
+                    </div>
+                </div>
+            </div>                           
+       
+    </div>
+    <script>
+        const mobileScreen = window.matchMedia("(max-width: 990px )");
+            $(document).ready(function () {
+                $(".dashboard-nav-dropdown-toggle").click(function () {
+                    $(this).closest(".dashboard-nav-dropdown")
+                        .toggleClass("show")
+                        .find(".dashboard-nav-dropdown")
+                        .removeClass("show");
+                    $(this).parent()
+                        .siblings()
+                        .removeClass("show");
+                });
+                $(".menu-toggle").click(function () {
+                    if (mobileScreen.matches) {
+                        $(".dashboard-nav").toggleClass("mobile-show");
+                    } else {
+                        $(".dashboard").toggleClass("dashboard-compact");
+                    }
+                });
+            });
+    </script>
+     <script>
+        function carregarDados() {
+            $.ajax({
+                url: 'http://localhost:3000/provsw/stak/stakeholder',
+                type: 'GET',
+                success: function(response) {
+                    $('#tabelaStakeholder tbody').empty();
+                    
+                    // Verifique se há erros
+                    if (response.error) {
+                        console.error('Erro na requisição:', response.error);
+                        return;
+                    }
+
+                    // Verifique se há dados
+                    if (!response.result || !Array.isArray(response.result)) {
+                        console.error('Dados inválidos ou ausentes na resposta.');
+                        return;
+                    }
+
+                    // Adiciona os novos dados à tabela
+                    response.result.forEach(function(stakeholder) {
+                        var newRow = $('<tr>' +
+                                        '<td>' + stakeholder.codigo + '</td>' +
+                                        '<td>' + stakeholder.nome + '</td>' +
+                                        '<td>' + stakeholder.tipo + '</td>' +
+                                        '<td>' +
+                                            '<button type="button" class="btn btn-success rounded">Editar</button>' +
+                                            '<button type="button" class="btn btn-danger rounded" onclick="exibirModal(\'row' + stakeholder.codigo + '\')">Deletar</button>' +
+                                        '</td>' +
+                                    '</tr>');
+                        $('#tabelaStakeholder tbody').append(newRow);
+                    });
+                },
+                error: function(xhr, status, error) {
+                    console.error(error);
+                }
+            });
+        }
+        // Chama a função para carregar os dados ao carregar a página
+        $(document).ready(function() {
+            carregarDados();
+        });
+    </script>
+
+    <script>
+
+        function abrirModalEditar(idStakeholder, nome, tipo) {
+            // Preenche os campos do modal
+            $('#editId').val(idStakeholder);
+            $('#editNome').val(nome);
+            $('#editTipo').val(tipo);
+
+            // Abre o modal
+            $('#modalEditar').modal('show');
+        }
+
+        $(document).on('click', '.btn-success', function () {
+            var row = $(this).closest('tr'); // Encontra a linha da tabela mais próxima
+            var idStakeholder = row.find('td:eq(0)').text(); // Captura o ID do Stakeholder na primeira célula da linha
+            var nome = row.find('td:eq(1)').text(); // Captura o nome do Stakeholder na segunda célula da linha
+            var tipo = row.find('td:eq(2)').text();
+
+            console.log("ID:", idStakeholder);
+            console.log("Nome:", nome);
+            console.log("Tipo:", tipo);
+            
+            abrirModalEditar(idStakeholder, nome, tipo);
+        });
+
+        $('#formEditar').submit(function(event) {
+            event.preventDefault();
+
+            var idStakeholder = $('#editId').val();
+        
+            $.ajax({
+                url: 'http://localhost:3000/provsw/stak/stakeholder/'+ idStakeholder,
+                type: 'PUT',
+                data: {
+                    name: $('#editNome').val(),
+                    tipo: $('#editTipo').val()
+                },
+                success: function(response) {
+                    console.log('Resposta da requisição de edição:', response);
+                    console.log('Status da resposta:', response.status);
+                    console.log('Dados retornados:', response.data);
+
+                    carregarDados();
+
+                    $('#modalEditar').modal('hide');
+                },
+                error: function(xhr, status, error) {
+                    console.error(error);
+                }
+            });
+        });
+        // Fechar o modal e cancelar a requisição de atualização ao clicar no botão de fechar (x) ou fora do modal
+        $('#modalEditar').on('hidden.bs.modal', function () {
+            $('#editId').val('');
+            $('#editNome').val('');
+            $('#editTipo').val('');
+            $('#formEditar').off('submit');
+        });
+    </script>
+
+    <script>
+        let idToDelete;
+
+        function exibirModal(id) {
+            idToDelete = id;
+            $('#confirmacaoModal').modal('show');
+            $('#confirmarExclusao').on('click', function() {
+                deletar(idToDelete);
+            });
+        }
+
+        $(document).on('click', '.btn-danger', function () {
+            var row = $(this).closest('tr'); // Encontra a linha da tabela mais próxima
+            var idStakeholder = row.find('td:eq(0)').text(); // Captura o ID do recurso na primeira célula da linha
+        
+            console.log("ID:", idStakeholder);
+            
+            exibirModal(idStakeholder);
+        });
+
+        async function deletar(idToDelete) {
+            // Fecha o modal de confirmação
+            $('#confirmacaoModal').modal('hide');
+
+            // Chama a função de exclusão no backend passando o id como parâmetro
+            $.ajax({
+                url: 'http://localhost:3000/provsw/stak/stakeholder/'+ idToDelete,
+                type: 'PUT',
+                success: function(response) {
+                    // Remove a linha da tabela
+                    carregarDados();
+                },
+                error: function(xhr, status, error) {
+                    console.error('Erro ao deletar recurso');
+                }
+            });
+        }
+
+        // Adiciona um listener para o botão de confirmar exclusão
+        document.getElementById('confirmarExclusao').addEventListener('click', deletar);
+    </script>
+
+    <!--Tradutor-->
+    <div class="gtranslate_wrapper"></div>
+    <script>window.gtranslateSettings = {"default_language":"pt","languages":["pt","es","en"],"wrapper_selector":".gtranslate_wrapper","alt_flags":{"en":"usa","pt":"brazil","es":"argentina"}}</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+</body>
+</html>

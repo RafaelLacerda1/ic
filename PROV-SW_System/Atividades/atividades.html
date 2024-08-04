@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- CSS do Art -->
+    <link rel="stylesheet" href="css/styleAtividade.css">
+    <link rel="stylesheet" href="css/styles.css">
+     <!-- Jquery Modal-->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class='dashboard'>
+        <div class="dashboard-nav">
+            <nav class="dashboard-nav-list">
+              <header><a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a><a href="#" class="brand-logo "><span><p class="corInicio">PROV-SwSystem</p></span></a></header>
+              <a href="#" class="dashboard-nav-item"><i class="fas fa-home"></i> Home</a>
+              <a href="#" class="dashboard-nav-item"><i class="fas fa-user"></i> Minha Conta </a>
+              <div class="nav-item-divider"></div>
+  
+              <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-users"></i> Artefatos </a>
+                  <div class='dashboard-nav-dropdown-menu'>
+                      <a href="../Artefatos/artefatos.html" class="dashboard-nav-dropdown-item active">Cadastrar</a>
+                      <a href="../Artefatos/listarArtNovo.html" class="dashboard-nav-dropdown-item">Listar</a>
+                  </div>
+              </div>
+              <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-users"></i> Recursos </a>
+                  <div class='dashboard-nav-dropdown-menu'>
+                      <a href="../Recursos/recursos.html" class="dashboard-nav-dropdown-item">Cadastrar</a>
+                      <a href="../Recursos/listarRecursos.html" class="dashboard-nav-dropdown-item">Listar</a>
+                  </div>
+              </div>
+              <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-users"></i> Procedimentos </a>
+                  <div class='dashboard-nav-dropdown-menu'>
+                      <a href="../Procedimentos/procedimentos.html" class="dashboard-nav-dropdown-item">Cadastrar</a>
+                      <a href="../Procedimentos/listarProcedimentos.html" class="dashboard-nav-dropdown-item">Listar</a>
+                  </div>
+              </div>
+              <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-users"></i>Processos </a>
+                  <div class='dashboard-nav-dropdown-menu'>
+                      <a href="../Processos/processos.html" class="dashboard-nav-dropdown-item">Cadastrar</a>
+                      <a href="../Processos/listarProcessos.html" class="dashboard-nav-dropdown-item">Listar</a>
+                  </div>
+              </div>
+              <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-money-check-alt"></i> Atividades </a>
+                  <div class='dashboard-nav-dropdown-menu'>
+                    <a href="../Atividades/atividades.html" class="dashboard-nav-dropdown-item">Cadastrar</a>
+                    <a href="../Atividades/listarAtividade.html" class="dashboard-nav-dropdown-item">Listar</a>
+                  </div>
+                </div>
+  
+              <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-money-check-alt"></i> Stakeholders </a>
+                <div class='dashboard-nav-dropdown-menu'>
+                  <a href="../Stakeholder/stakeholder.html" class="dashboard-nav-dropdown-item">Cadastrar</a>
+                  <a href="../Stakeholder/listarStakeholder.html" class="dashboard-nav-dropdown-item">Listar</a>
+                </div>
+              </div>
+              <div class="nav-item-divider"></div>
+              <a href="#" class="dashboard-nav-item"><i class="fas fa-sign-out-alt"></i> Logout </a>
+            </nav>
+          </div>
+     <main>
+        <div class='dashboard dashboard-app corfundo'>
+            <header class='dashboard-toolbar'>
+                <a href="#!" class="menu-toggle">
+                     <img src="img/three_16602750.png" width="15" height="15">
+                </a>
+                <div class="col-6">
+                <div class="col-1 psw">
+                    <a href="../index.html"><img src="./img/Logo.png" alt="PSW" id="logo"></a> 
+                </div>
+            </header>
+
+            <div class='dashboard-content'>
+                <div class='container-fluid'>
+                    <div class='card' >
+                        <div class='card-header'>
+                            <h1>Atividades</h1>
+                        </div>
+                        <div class='card-body'>
+                            <div class="col py-3">
+                                    <form id="formulário">
+                                        <div class="container-sm pagina">
+                                            <div class="row row-cols-9">
+                                                <div class="div col-1 titulo">
+                                                    <p class="titulo">Título<b><h7 style="color: red;">*</h7></b>:</p>
+                                                </div>
+                                                <div class="col-10">
+                                                    <label for="textareaTitulo" class="form-label titulo"></label>
+                                                    <textarea class="form-control titulo-texto textarea-container titulo-atv" id="textareaTitulo" rows="3" name="nome"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="row row-cols-9">
+                                                <div class="input-container row row-cols-5 compos" id="softprocess">
+                                                    <div class="div col-1 titulo nome-texto">
+                                                        <p class="titulo">Processo de Software associado<b><h7 style="color: red;">*</h7></b>:</p>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <label for="textareaSoftProc" class="form-label titulo"></label>
+                                                        <textarea class="form-control titulo-texto textarea-container softprocess" id="textareaSoftProc" rows="3" name="softprocess" oninput="trimLeadingWhitespace(this), buscarSPSemelhantes(this)"></textarea>
+                                                        <select class="col-sm-9" id="opcoesSoftProcess" style="display: none;" onchange="preencherTextAreaSP(this)">
+                                                            <!-- Opções dos nomes dos stakeholders semelhantes serão adicionadas aqui quando começarem a digitar-->
+                                                        </select>
+                                                    </div>
+                                                </div>
+            
+                                                <!-- DATE START-->
+                                                <div class="container-sm">
+                                                    <div class="row row cols-12 horas">
+                                                        <div class="col">
+                                                            <span class="titulo">Iniciado em <b><h7 style="color: red;">*</h7></b>: </span>
+                                                            <input class="date-texto" id="date1" type="date" name="date1"/>
+                                                        </div>
+                                                        <div class="col">
+                                                            <span class="titulo">Hora <b><h7 style="color: red;">*</h7></b>: </span>
+                                                            <input class="hour-texto" id="hora-cons1" type="time" name="hora-cons1" value="" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- END DATE START-->
+                        
+                                                <div class="container-sm phr">
+                                                    <p class="h5 titulo">Adoção </p>
+                                                    <hr>
+                                                </div>
+                                                <!--ADOPT-->
+                                                <div class="container-sm pagina">
+                                                    <div class="row itens">
+                                                        <div class="col-3 stak">
+                                                            <p class="h6">
+                                                                Adotou Algum Procedimento:
+                                                            </p>   
+                                                        </div>                                                                                                          
+                                                        <div class="col-1 quadrado">
+                                                            <input class="form-check-input border-secondary" type="checkbox" id="showMoreContentAdopt" onchange="toggleMoreContentAdopt()">
+                                                        </div>
+                                                        <div class="col-1">
+                                                            <a type="button" class="btn btn-secondary btn-sm btn-todos cadastrar-activity rounded" href="../Procedimentos/procedimentos.html">Cadastrar</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="input-container container-sm pop adotou" id="procedAdopt" style="display: none;">
+                                                    <!--AQUI VAO SER ADICIONADOS TEXTAREAS DINAMICAMENTE-->
+                                                </div>
+                                                <!-- END ADOPT-->
+            
+                                                <div class="container-sm phr">
+                                                    <p class="h5 titulo">Mudança </p>
+                                                    <hr>
+                                                </div>
+                                                <!-- CHANGED-->
+                                                <div class="container-sm pagina">
+                                                    <div class="row itens">
+                                                        <div class="col-3 stak">
+                                                            <p class="h6">
+                                                                Mudou Algum Artefato:
+                                                            </p>   
+                                                        </div>
+                                                        <div class="col-1 quadrado">
+                                                            <input class="form-check-input border-secondary" type="checkbox" id="showMoreContentChangArtif" onchange="toggleMoreContentChanged()">
+                                                        </div>
+                                                        <div class="col-1">
+                                                            <a type="button" class="btn btn-secondary btn-sm btn-todos cadastrar-activity rounded" href="../Artefatos/artefatos.html">Cadastrar</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="input-container container-sm pop mudou" id="artifactChanged" style="display: none;">
+                                                    <!--AQUI VAO SER ADICIONADOS TEXTAREAS DINAMICAMENTE-->
+                                                </div>
+                                                <!-- END CHANGED-->
+                                                <div class="container-sm phr">
+                                                    <p class="h5 titulo">Uso </p>
+                                                    <hr>
+                                                </div>
+                                                <!-- USED-->
+                                                <div class="container-sm pagina">
+                                                    <div class="row itens">
+                                                        <div class="col-3 stak">
+                                                            <p class="h6">
+                                                                Usou Algum Artefato:
+                                                            </p>   
+                                                        </div>
+                                                        <div class="col-1 quadrado">
+                                                            <input class="form-check-input border-secondary" type="checkbox" id="showMoreContentUsedArtif" onchange="toggleMoreContentUsedArtif()">
+                                                        </div>
+                                                        <div class="col-1">
+                                                            <a type="button" class="btn btn-secondary btn-sm btn-todos cadastrar-activity rounded" href="../Artefatos/artefatos.html">Cadastrar</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="container-sm pop usedArtif" id="artifactUsed" style="display: none;">
+                                                    <!--AQUI VAO SER ADICIONADOS TEXTAREAS DINAMICAMENTE-->
+                                                </div>
+                                                <div class="container-sm pagina" style="padding-top: 2vh;">
+                                                    <div class="row itens">
+                                                        <div class="col-3 stak">
+                                                            <p class="h6">
+                                                                Usou Algum Recurso:
+                                                            </p>   
+                                                        </div>
+                                                        <div class="col-1 quadrado">
+                                                            <input class="form-check-input border-secondary" type="checkbox" id="showMoreContentUsedResour" onchange="toggleMoreContentUsedResour()">
+                                                        </div>
+                                                        <div class="col-1">
+                                                            <a type="button" class="btn btn-secondary btn-sm btn-todos cadastrar-activity rounded" href="../Recursos/recursos.html">Cadastrar</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="container-sm pop" id="resourceUsed" style="display: none;">
+                                                    <!--AQUI VAO SER ADICIONADOS TEXTAREAS DINAMICAMENTE-->
+                                                </div>
+                                                <!-- END USED-->
+                                                <div class="container-sm phr">
+                                                    <p class="h5 titulo">Stakeholders Associados</p>
+                                                    <hr>
+                                                </div>
+                                                <!-- STAKEHOLDERS-->
+                                                <div class="container-sm pagina">
+                                                    <div class="row itens">
+                                                        <div class="col-3 stak">
+                                                            <span class="h6">
+                                                                Possui Stakeholders Associados:
+                                                            </p>   
+                                                        </div>
+                                                        <div class="col-1 quadrado">
+                                                            <input class="form-check-input border-secondary" type="checkbox" id="showMoreContentStakeholder" onchange="toggleMoreContentStakeholder()">
+                                                        </div>
+                                                        <div class="col-1">
+                                                            <a type="button" class="btn btn-secondary btn-sm btn-todos cadastrar-activity rounded" href="../Stakeholder/stakeholder.html">Cadastrar</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="container-sm pop" id="stakeholderAssociated" style="display: none;">
+                                                    <div class="row">
+                                                        <div class="col-3 nome-texto">
+                                                            <p class="h5 titulo">Nome do Stakeholder:</p>
+                                                        </div>
+                                                        <div class="col-9 nome">
+                                                            <textarea class="form-control titulo-texto check-text stakehold" id="textareaStakeholderAssociated" rows="1"></textarea>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                                <!-- END STAKEHOLDERS-->
+                                                <div class="container-sm phr">
+                                                    <p class="h5 titulo">Finalização da Atividade</p>
+                                                    <hr>
+                                                </div>    
+                                                <!-- DATE FINAL-->
+                                                <div class="container-sm">
+                                                    <div class="row row cols-12 horas">
+                                                        <div class="col">
+                                                            <span class=" titulo">Finalizado em <b><h7 style="color: red;">*</h7></b>: </span>
+                                                            <input class="date-texto" id="date2" type="date" name="date2"/>
+                                                        </div>
+                                                        <div class="col">
+                                                            <span class="titulo">Hora <b><h7 style="color: red;">*</h7></b>: </span>
+                                                            <input class="hour-texto" id="hora-cons2" type="time" name="hora-cons2" value="" />
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                                <!-- END DATE FINAL-->
+                                            </div>
+                                            <div>
+                                                <input type="hidden" id="oldActivityId" name="oldActivityId" value="">
+                                            </div>  
+                                        </div>                          
+                                        <!-- BUTTONS -->
+                                        <div class="container-sm buttons">
+                                            <div class="row justify-content-center">
+                                                <div class="col-1">
+                                                    <button type="submit" class="btn btn-secondary btn-sm btn-todos rounded cadastrar">Cadastrar</button>
+                                                </div>
+                                                <div class="col-2">
+                                                    <button type="reset" class="btn btn-secondary btn-sm btn-todos cancelar rounded">Cancelar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END BUTTONS -->
+                                    </form>      
+                                    <!--MODAL-->
+                                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Enviada com Sucesso</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Atividade cadastrada com sucesso!
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-animated bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <!-- END MODAL-->
+                                </div>
+                           
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </main>
+       
+    </div>
+   
+    <script src="./activity.js"></script>
+
+    <!--Tradutor-->
+    <div class="gtranslate_wrapper"></div>
+    <script>window.gtranslateSettings = {"default_language":"pt","languages":["pt","es","en"],"wrapper_selector":".gtranslate_wrapper","alt_flags":{"en":"usa","pt":"brazil","es":"argentina"}}</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+</body>
+</html>
